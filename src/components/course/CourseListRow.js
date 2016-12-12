@@ -17,4 +17,5 @@ CourseListRow.propTypes = {
     course: PropTypes.object.isRequired
 };
 
+
 export default CourseListRow;
