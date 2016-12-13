@@ -1,7 +1,5 @@
 import express from 'express';
 import path from 'path';
-import open from 'open';
-import compression from 'compression';
 
 /* eslint-disable no-console */
 const app = express();

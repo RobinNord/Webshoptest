@@ -13,6 +13,7 @@ module.exports = function (app, config) {
     app.locals.ENV = env;
     app.locals.ENV_DEVELOPMENT = env == 'development';
 
+    app.use(favicon(config.root + '/img/favicon.ico'));
     app.use(logger('dev'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
