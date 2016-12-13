@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Starter kit for React and Redux Pluralsight course by Cory House",
   "engines": {
-    "node": "6.6.0"
+    "node": "6.9.1"
   },
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
@@ -18,14 +18,19 @@
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist test lint build:html",
     "build": "babel-node tools/build.js",
-    "postbuild": "babel-node tools/server.js"
+    "postbuild": "babel-node ./app.js"
   },
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
+    "body-parser": "^1.15.2",
     "bootstrap": "3.3.6",
+    "cookie-parser": "^1.4.3",
+    "http": "latest",
     "jquery": "2.2.3",
+    "method-override": "^2.3.7",
+    "morgan": "^1.7.0",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
@@ -33,8 +38,8 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2",
-    "http": "latest"
+    "serve-favicon": "^2.3.2",
+    "toastr": "2.1.2"
   },
   "devDependencies": {
     "http": "latest",
