@@ -8,9 +8,6 @@ import ProductsPage from './components/products/ProductsPage';
 
 export default (
     <Route path="/" component={App}>
-        <IndexRoute component={HomePage} />
-        <Route path="about" component={AboutPage} />
-        <Route path="courses" component={CoursesPage} />
-        <Route path="products" component={ProductsPage} />
+        <IndexRoute component={ProductsPage} />
     </Route>
 );

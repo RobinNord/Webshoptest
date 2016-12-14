@@ -20,36 +20,8 @@ module.exports = function (app, config) {
     app.use(cookieParser());
 
     app.use(compression());
-    app.use(express.static('dist'));
+    // app.use(express.static('../dist'));
     app.use(methodOverride());
-
-    app.use(function (req, res, next) {
-        let err = new Error('Not Found');
-        err.status = 404;
-        next(err);
-    });
-
-    if (app.get('env') === 'development') {
-        app
-            .use(function (err, req, res, next) {
-                res.status(err.status || 500);
-                res.render('error', {
-                    message: err.message,
-                    error: err,
-                    title: 'error'
-                });
-            });
-    }
-
-    app
-        .use(function (err, req, res, next) {
-            res.status(err.status || 500);
-            res.render('error', {
-                message: err.message,
-                error: {},
-                title: 'error'
-            });
-        });
 
     return app;
 };

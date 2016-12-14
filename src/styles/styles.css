@@ -13,3 +13,11 @@ a.active{
 nav{
     padding-top: 20px;
 }
+
+.onhover-pointer:hover{
+    cursor: pointer;
+}
+
+.margin-botnav{
+    padding-bottom: 20px;
+}
