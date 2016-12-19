@@ -14,4 +14,5 @@ export default function productReducer(state = { items: null, isLoading: false }
         default:
             return state;
     }
+    
 }
